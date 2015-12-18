@@ -17,7 +17,9 @@
   "source_files": "NSInvocation+Bb.{h,m}",
   "frameworks": [
 	  "Foundation",
-	  "UIKit"
+	  "UIKit",
+	  "MapKit",
+	  "QuartzCore"
   ],
   "requires_arc": true
 }
