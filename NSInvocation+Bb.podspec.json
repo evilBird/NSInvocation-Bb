@@ -1,6 +1,6 @@
 {
-  "name": "NSInvocation+Bb.podspec.json",
-  "version": "0.0.1",
+  "name": "NSInvocation+Bb",
+  "version": "0.0.2",
   "summary": "Category on NSInvocation with convenience methods.",
   "homepage": "https://github.com/evilBird/NSInvocation-Bb",
   "license": "MIT",
@@ -9,12 +9,12 @@
   },
   "source": {
     "git": "https://github.com/evilBird/NSInvocation-Bb.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "7.0"
   },
-  "source_files": "NSInvocation-Bb.{h,m}",
+  "source_files": "NSInvocation+Bb.{h,m}",
   "frameworks": [
 	  "Foundation",
 	  "UIKit"

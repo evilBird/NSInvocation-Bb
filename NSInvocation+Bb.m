@@ -9,6 +9,8 @@
 #import "NSInvocation+Bb.h"
 #import <objc/runtime.h>
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @implementation NSInvocation (Bb)
 
