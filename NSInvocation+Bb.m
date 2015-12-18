@@ -21,7 +21,7 @@
 
 + (NSArray *)getClassNamesMatchingPattern:(NSString *)matchingPattern
 {
-    NSArray *allClasses = [NSObject getClassList];
+    NSArray *allClasses = [NSInvocation getClassList];
     if ( nil == allClasses || allClasses.count == 0 ) {
         return nil;
     }
@@ -78,13 +78,27 @@
     
 }
 
++ (NSArray *)getMethodListForClass:(NSString *)className matchingPattern:(NSString *)matchingPattern
+{
+    NSArray *methodList = [NSInvocation getMethodListForClass:className];
+    
+    if ( nil == methodList || methodList.count == 0 ) {
+        return nil;
+    }
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF like[cd] %@",matchingPattern];
+    NSArray *filtered = [methodList filteredArrayUsingPredicate:predicate];
+    
+    return filtered;
+}
+
 + (Class)lookupClass:(NSString *)className
 {
-    NSArray *classList = [NSObject getClassList];
+    NSArray *classList = [NSInvocation getClassList];
     
     if ( [classList containsObject:className] == NO ) {
         NSString *match = [NSString stringWithFormat:@"%@*",className];
-        NSArray *classes = [NSObject getClassNamesMatchingPattern:match];
+        NSArray *classes = [NSInvocation getClassNamesMatchingPattern:match];
         if ( nil == classes || classes.count == 0 ) {
             return nil;
         }

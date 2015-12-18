@@ -1,6 +1,6 @@
 {
   "name": "NSInvocation+Bb",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "summary": "Category on NSInvocation with convenience methods.",
   "homepage": "https://github.com/evilBird/NSInvocation-Bb",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/evilBird/NSInvocation-Bb.git",
-    "tag": "0.0.2"
+    "tag": "0.0.3"
   },
   "platforms": {
     "ios": "7.0"
